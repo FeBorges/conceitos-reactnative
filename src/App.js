@@ -18,11 +18,13 @@ export default function App() {
     api.get('repositories').then(response => {
       setRepositories(response.data);
       
-    })
+    });
     
   }, []);
 
   // console.log(repositories);
+
+  
   async function handleLikeRepository(id) {
     const response = await api.post(`repositories/${id}/like`);
 
@@ -46,9 +48,9 @@ export default function App() {
 
         <FlatList
           data={repositories}
-          keyExtractor={repository => repository.id}
+          keyExtractor={(repository) => repository.id}
           renderItem={({ item: repository }) => (
-            
+          
             <View style={styles.repositoryContainer}>
               <Text style={styles.repository}>{repository.title}</Text>
 
@@ -93,6 +95,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#7159c1",
+    
   },
   repositoryContainer: {
     marginBottom: 15,
@@ -107,15 +110,16 @@ const styles = StyleSheet.create({
   techsContainer: {
     flexDirection: "row",
     marginTop: 10,
+    
   },
   tech: {
+    backgroundColor: "#04d361",
     fontSize: 12,
     fontWeight: "bold",
     marginRight: 10,
-    backgroundColor: "#04d361",
     paddingHorizontal: 10,
     paddingVertical: 5,
-    color: "#fff",
+    color: "#fff",  
   },
   likesContainer: {
     marginTop: 15,
