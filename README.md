@@ -15,11 +15,11 @@ Ex:
   },
 
   Função que percorre o array tech:
-  <View style={styles.techsContainer}>
+  <!-- <View style={styles.techsContainer}>
                 {repository.techs.map(tech => (
                   <Text key={tech} style={styles.tech}>
                   {tech}
                   </Text>
                   
                 ))}
-              </View>
+              </View> -->
