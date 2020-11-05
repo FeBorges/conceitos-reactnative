@@ -2,7 +2,7 @@
 No formato original do cadastro no Insomnia estava estruturado como string, mas deve ser como array
 
 **Ex:**
-`` ` 
+```json 
 {
     "id": "be3274df-d149-42c4-8dff-6b671637a84e",
     "title": "Novo Item da lista2",
@@ -14,9 +14,9 @@ No formato original do cadastro no Insomnia estava estruturado como string, mas 
     ],
     "likes": 0
   },
-`` `
+```
 **Função que percorre o array tech:**
-  `` `
+  ```javascript
   <View style={styles.techsContainer}>
       {repository.techs.map(tech => (
         <Text key={tech} style={styles.tech}>
@@ -24,4 +24,4 @@ No formato original do cadastro no Insomnia estava estruturado como string, mas 
         </Text>           
       ))}
   </View>
-  `` `
+  ```
